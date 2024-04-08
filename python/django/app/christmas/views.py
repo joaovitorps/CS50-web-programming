@@ -4,13 +4,22 @@ from datetime import datetime
 # Create your views here.
 
 
-def is_christmas(request):
-    is_christmas = False
-    today = datetime.today().strftime("%m-%d")
+def today():
+    today = datetime.now()
+    return today
 
-    if today == "12-25":
+
+def is_christmas(today=today()):
+    is_christmas = False
+
+    if today.day == 25 and today.month == 12:
         is_christmas = True
 
     context = {"is_christmas": is_christmas}
+    return context
+
+
+def index(request):
+    context = is_christmas()
 
     return render(request, "christmas/index.html", context)
