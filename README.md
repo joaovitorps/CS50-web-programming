@@ -11,7 +11,7 @@
 
 To run the django project use:
 
-- `docker compose up -d`
+- `docker compose -f python/django/compose.yaml up -d`
 - `open the server on localhost:8000`
 
 # Stack learned/practiced
