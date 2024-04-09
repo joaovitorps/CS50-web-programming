@@ -14,6 +14,10 @@ To run the django project use:
 - `docker compose -f python/django/compose.yaml up -d`
 - `open the server on localhost:8000`
 
+## python/django-airline-project
+
+There is a README.md in thi path lol
+
 # Stack learned/practiced
 
 - HTML5
