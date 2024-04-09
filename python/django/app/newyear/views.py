@@ -4,8 +4,8 @@ from datetime import datetime
 # Create your views here.
 
 
-def index(response):
+def index(request):
     now = datetime.now()
     return render(
-        response, "newyear/index.html", {"newyear": now.month == 1 and now.day == 1}
+        request, "newyear/index.html", {"newyear": now.month == 1 and now.day == 1}
     )
