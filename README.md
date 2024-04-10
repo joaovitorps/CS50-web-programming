@@ -24,4 +24,5 @@ There is a README.md in thi path lol
 - CSS3
 - Python
 - Django
+- Javascript
 - Docker
