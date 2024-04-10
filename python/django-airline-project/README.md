@@ -10,6 +10,7 @@ All commandos should be run from `CS50-web-programming/python/django-airline-pro
 ### Apps inside this project
 
 - flight
+- users
 
 To add an app, run: `docker compose run web ./manage.py startapp app_name`
 
