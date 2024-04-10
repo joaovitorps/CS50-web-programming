@@ -1,0 +1,8 @@
+{% extends 'flights/layout.html' %} {% block body %}
+<a href="{% url 'flights:passengers' %}">Go back</a>
+<h2>Passenger</h2>
+<ul>
+  <li>First Name: {{passenger.first_name}}</li>
+  <li>Last Name: {{passenger.last_name}}</li>
+</ul>
+{% endblock %}

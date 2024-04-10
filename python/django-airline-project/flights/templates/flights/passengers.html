@@ -1,0 +1,12 @@
+{% extends 'flights/layout.html' %} {% block body %}
+<h2>These are all passengers</h2>
+<ul>
+  {% for passenger in passengers %}
+  <li>
+    <a href="{% url 'flights:passenger' passenger.id %}">{{passenger}}</a>
+  </li>
+  {% empty %}
+  <li>No passengers</li>
+  {% endfor %}
+</ul>
+{% endblock %}
