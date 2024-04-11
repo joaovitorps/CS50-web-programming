@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Singlepage</title>
+    <style>
+      h1 {
+        display: none;
+      }
+    </style>
+    <script>
+      function showPage(page) {
+        document.querySelectorAll("h1").forEach((pageh1) => {
+          pageh1.style.display = "none";
+        });
+        document.getElementById(page).style.display = "block";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("button").forEach((button) => {
+          const page = button.dataset.page;
+          button.onclick = () => {
+            showPage(page);
+          };
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="page-1">opa</h1>
+    <h1 id="page-2">opa2</h1>
+    <h1 id="page-3">opa3</h1>
+    <button data-page="page-1">Display 1</button>
+    <button data-page="page-2">Display 2</button>
+    <button data-page="page-3">Display 3</button>
+  </body>
+</html>
